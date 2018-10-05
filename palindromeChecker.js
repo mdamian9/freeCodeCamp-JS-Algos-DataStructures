@@ -1,15 +1,15 @@
-function palindrome(str) {
+palindrome = (str) => {
     console.log(str);
-    var flag = true;
-    var lowerCaseStr = str.toLowerCase();
-    var cleanStr = "", strTwo = "";
-    var letters = /^[0-9a-zA-Z]+$/;
-    for (var i = 0; i < lowerCaseStr.length; i++) {
+    let flag = true;
+    const lowerCaseStr = str.toLowerCase();
+    let cleanStr = "", strTwo = "";
+    const letters = /^[0-9a-zA-Z]+$/;
+    for (let i = 0; i < lowerCaseStr.length; i++) {
         if (lowerCaseStr[i].match(letters)) {
             cleanStr += lowerCaseStr[i]
         };
     };
-    for (var i = lowerCaseStr.length - 1; i >= 0; i--) {
+    for (let i = lowerCaseStr.length - 1; i >= 0; i--) {
         if (lowerCaseStr[i].match(letters)) {
             strTwo += lowerCaseStr[i];
         };
